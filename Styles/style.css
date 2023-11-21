@@ -1,0 +1,12 @@
+/* Reset des paramètres par défaut */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Changement de l'effet de navigation en smooth pour adoucire les déplacements*/
+html{
+  scroll-behavior: smooth;
+}
