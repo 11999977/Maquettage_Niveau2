@@ -7,6 +7,991 @@
 }
 
 /* Changement de l'effet de navigation en smooth pour adoucire les déplacements*/
+/* Création des variables pour les couleurs */
 html{
   scroll-behavior: smooth;
+  --main-color: #E89535;
+  --second-color: #1a1a1a;
+  --text-color: #333;
+  --background-button: #1A1A1A;
+}
+
+/* détermination du font pour toute la page */
+body{
+  font-family: Abhaya Libre;
+  padding-top: 23px;
+  max-width: 976px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+body a{
+  text-decoration: none;
+}
+body button{
+  cursor: pointer;
+}
+
+.cercle-color{
+  width: 261px;
+  height: 241px;
+  border-radius: 261px;
+  background: linear-gradient(154deg, rgba(255, 242, 222, 0.00) 13.5%, #FFF2DF 25.82%, rgba(149, 246, 246, 0.31) 46.22%, rgba(187, 218, 240, 0.37) 57%, rgba(215, 186, 228, 0.29) 62.77%, rgba(249, 178, 242, 0.18) 75.09%, rgba(252, 183, 119, 0.15) 87.41%);
+  filter: blur(40px);
+}
+
+/* Navbar: redimenssionnement du logo */
+
+header nav .logo img{
+  width: 152px;
+  height: 73px;
+  margin-left: 45px;
+  
+}
+
+/* passage en flex de la navbar*/
+
+header .navbar{
+  display: flex;
+  gap: 92.5px;
+  align-items: center;
+  width: 976px;
+  height: 73px;
+  justify-content: center;
+  
+}
+
+/* disposition du container de la liste du menu */
+
+header .navbar .menu{
+  display: flex;
+  gap: 128.5px;
+  align-items: center;
+}
+/* disposition de la liste du menu */
+
+header .navbar .list_menu{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  width: 411px;
+  
+  
+  
+}
+
+header .navbar .list_menu li a{
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  text-align: center;
+}
+
+header .navbar .register{
+  width: 106px;
+  height: 40px;
+  background: var(--background-button);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  
+}
+
+/* HERO */
+
+.hero{
+  margin-bottom: 144px;
+  height: 449px;
+  margin-top: 32px;
+  position: relative;
+  
+}
+
+
+/* Container de l'image du hero */
+.hero .bgc #hero-img {
+  height: 449px;
+  width: 698px;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+/* container du texte du hero */
+.hero .bgc .txt-hero{
+  width: 340px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+  margin-left: 66px;
+  z-index: 1;
+  padding-top: 44px;
+  
+  
+}
+
+/* stylisation du titre de l'hero */
+
+.hero .bgc .txt-hero h1{
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: -0.52px;
+}
+
+/* boutton du hero */
+
+.hero .txt-hero .room{
+  width: 132px;
+  height: 46px;
+  background: var(--background-button);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+}
+
+/* Bloc informatif inscrit dans l'image du hero */
+
+.img-hero{
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.88);
+  max-width: 478px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  left: 28.2%;
+  gap: 29px;
+  
+}
+
+.img-hero .items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  gap: 12px;
+  padding-left: 31px;
+  
+}
+
+.img-hero #pr{
+  padding-right: 62px;
+}
+
+.img-hero #sd{
+  padding-right: 54px;
+}
+
+.img-hero #rd{
+  padding-right: 37px;
+}
+
+.img-hero .items p{
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: -0.13px;
+}
+
+.img-hero .items img{
+  width: 20px;
+  height: 20px;
+}
+
+
+.img-hero .items #noborder{
+  padding-right: 0;
+}
+
+
+.img-hero .items .txt-items{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Première section */
+
+.first{
+  background-color: #FBF7F4;
+  height: 100%;
+  position: relative;
+}
+
+.container-first{
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  width: 379px;
+  height: 530px;
+}
+
+/* première aside: disposition des images de côté. */
+
+.container-first .img-section-first{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 83px;
+  padding-left: 66px;
+  padding-top: 76px;
+}
+
+.container-first .img-section-first .first-img1,.first-img2{
+  width: 379px;
+  height: 245px;
+}
+.purcent{
+  position: relative;
+}
+
+.tx-purcent{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-left: 5px solid #E89535;
+  opacity: 0.8;
+  width: 181px;
+  height: 127px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-top: 23px;
+  /* align-items: center; */
+  gap: 24px;
+  
+  
+}
+.tx-purcent p{
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 90%; /* 27px */
+  letter-spacing: -0.125px;
+  color: var(--second-color);
+  width: 126px;
+}
+
+.tx-purcent p span{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90%; /* 27px */
+  letter-spacing: -0.3px;
+  color: var(--second-color);
+}
+
+/* Deuxième bloc de côté text et img */
+
+.section-first-txt-img .txt-section-first{
+  display: flex;
+  flex-direction: column;
+}
+
+/* container du titre, icones et de l'image de la chambre*/
+
+.section-first-txt-img{
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  max-width: 439px;
+}
+
+/* container du titre et des icones */
+.txt-section-first{
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
+}
+
+.txt-section-first .title-sextion-first p{
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 140%; /* 
+  color: #333;
+  
+}
+
+.txt-section-first .title-sextion-first h2{
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 90%; /* 38.7px */
+  letter-spacing: -0.43px;
+  
+}
+
+/* container des icons et du bouton */
+
+.container-icons{
+  display: flex;
+  gap: 42px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.icones-section-first{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icones-section-first .icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.icones-section-first .icons p{
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 90%; /* 13.5px */
+  letter-spacing: -0.15px;
+}
+
+.container-icons .show-offre{
+  width: 102px;
+  height: 42px;
+  background: inherit;
+  color: var(--text-color);
+  outline: none;
+  display: block;
+}
+
+/* Troisième section des services */
+ /* Container principal */
+.services{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 94px;
+  margin-bottom: 189px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.services .cr1{
+  position: absolute;
+  top: -90px;
+  left: -90px;
+  z-index: -1;
+}
+
+.services_txt{
+  /* width: 280px; */
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 39px;
+}
+
+.services_txt #txt-h2,#txt-p{
+  text-align: center;
+  width: 280px;
+   
+}
+
+.services_txt #txt-p{
+  width: 280px;
+  text-align: center;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.145px;
+
+}
+
+/* Options des services */
+
+.options-services{
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+  align-items: center;
+  width: 844px;
+  
+}
+
+.options-services .options{
+  width: 201.25px;
+  height: 101px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #4D4D4D;
+  color: var(--text-color);
+}
+
+.options-services .pr1{
+  background: var(--background-button);
+  color: var(--main-color);
+}
+
+/* Image du restaurant*/
+
+.restaurant{
+  display: flex;
+  gap: 32px;
+  position: relative;
+}
+
+.restaurant .cr2{
+  position: absolute;
+  right: -90px;
+  bottom: -190px;
+  width: 164.128px;
+  
+}
+
+/* texte de la section restaurant et liste de lorem */
+
+.restaurant .menu-restaurant{
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+/* div du titre de la section restaurant */
+
+.title-restau{
+  display: flex;
+  flex-direction: column;
+  width: 385px;
+  gap: 17px;
+  height: 78px;
+}
+
+.titlte-restau h3{
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: -0.21px;
+  color: var(--second-color);
+}
+
+.titlte-restau p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.15px;
+  color: var(--second-color);
+  width: 363px;
+  height: 42px;
+  
+  
+}
+
+/* liste des lorem */
+
+.menu-restaurant .liste-menu-restau{
+  display: flex;
+  gap: 63px;
+
+}
+
+.menu-restaurant{
+  position: relative;
+}
+
+.liste-menu-restau .liste-lorem{
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 21px;
+ position: relative;
+}
+
+.liste-lorem li{
+  margin-left: 21px;
+  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.liste-lorem li a{
+  text-decoration: none;
+  color: #767272;
+  
+}
+
+.liste-lorem li::before{
+
+  content: " ";
+  background: var(--main-color);
+  position: absolute;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.menu-restaurant .reserve{
+  width: 102px;
+  height: 41px;
+  background: inherit;
+  color: var(--text-color);
+  outline: none;
+  border: 2px solid #4D4D4D;
+  position: absolute;
+  bottom: 0;
+  
+}
+
+/* Quatrième section des galeries */
+
+/* container principal */
+.decouverte{
+ position: relative;
+ margin-bottom: 86px;
+}
+
+.decouverte .cr3{
+  position: absolute;
+  left: -110px;
+  top: -150px;
+}
+
+.decouverte h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: -0.43px;
+  color: var(--second-color);
+}
+
+.options-galerie{
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-galerie .options-gal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 101px;
+  height: 35px;
+  border: 1px solid #767272;
+  outline: none;
+  background: inherit;
+  color: var(--text-color);
+}
+
+/* bouton de la galerie avec l'arrière plan noir */
+
+.options-galerie .black{
+  background: var(--background-button);
+  color: #fff;
+}
+
+/* galerie */
+
+.galery{
+  display: flex;
+  gap: 38px;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.galery .galery-1{
+  height: 408px;
+  position: relative;
+}
+
+
+/* texte des carte de la galerie */
+
+.galery-1 .txt-galery-st,.txt-galery-sd, .txt-galery-rd{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.txt-galery p{
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 140%;
+  letter-spacing: -0.15px;
+  color: #767272;
+  
+}
+
+.galery-1 .txt-galery-st{
+  width: 245px;
+}
+
+.galery-1 .txt-galery-sd{
+  width: 254px;
+}
+
+.galery-1 .txt-galery-rd{
+  width: 278px;
+}
+
+.galery-1 .reserv{
+  width: 100.824px;
+  height: 41px;
+  outline: none;
+  border: 2px solid #4D4D4D;
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: -0.13px;
+  background: inherit;
+  position: absolute;
+  bottom: 0;
+  
+}
+
+/* Pied de page */
+
+footer{
+  position: relative;
+}
+
+footer .cr4{
+  position: absolute;
+  bottom: 240px;
+  right: -60px;
+  transform: rotate(-11.734deg);
+  
+}
+
+
+/* Section de clients */
+
+.clients{
+  background: #F6F5F1;
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+  padding-bottom: 112px;
+}
+
+.persona{
+  display: flex;
+  gap: 20px;
+}
+
+.presentation p span{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 143%;
+  letter-spacing: -0.14px;
+  color: var(--second-color);
+}
+
+.presentation p{
+  color: #767272;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 143%;
+  letter-spacing: -0.7px;
+}
+
+.title-client h2{
+  font-size: 43px;
+  font-weight: 800;
+  line-height: 140%;
+  letter-spacing: -0.43px;
+  color: var(--second-color);
+}
+
+.txt-clients{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  width: 311px;
+  min-height: 105px;
+  margin-top: 62px;
+  
+}
+
+.txt-clients .infos-client{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Image des clients */
+
+.client-img{
+  display: flex;
+  gap: 27px;
+}
+
+.client-2{
+  margin-top: 41px;
+}
+
+/* Sectionn Joindre */
+
+.join{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  background: #F6F5F1;
+}
+
+.about{
+  width: 100%;
+  height: 291px;
+  background: var(--second-color);
+  display: flex;
+  flex-direction: column;
+  gap: 36.5px;
+  padding-left: 60px;
+}
+
+/*///////////// icones du footer ////////////*/
+
+.icons-about{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding-top: 57.5px;
+  width: 127px;
+  height: 43px;
+}
+
+/* container des liens du footer */
+
+.txt-about{
+    display: flex;
+    gap: 65px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.txt-about 
+
+/* listes du des lien du footer */
+.about-link{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-link li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.about-link li a span{
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 143%;
+  letter-spacing: -0.13px;
+}
+
+.about-link li a{
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 143%;
+  letter-spacing: -0.13px;
+}
+
+/* Aside avec la class abonner */
+
+.abonner{
+  width: 100%;
+}
+
+.abonner h2{
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.43px;
+  color: var(--second-color);
+  width: 282px;
+  
+}
+
+.abonner p{
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 130%; /* 18.85px */
+  letter-spacing: -0.145px;
+  color: #767272;
+  width: 282px;
+  
+}
+
+/* input d'enregistrement */
+
+.form{
+  display: flex;
+  gap: 17px;
+}
+
+.form .pre-email{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.pre-email input{
+  width: 186px;
+  height: 37px;
+  border: 1px solid #767272;
+  outline: none;
+  
+}
+
+input::placeholder{
+  text-align: center;
+  color:#767272;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* input avec arrière plan noir */
+.black-b{
+  background: var(--background-button);
+}
+
+.black-b::placeholder{
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Style de la navbar pour les médias */
+
+#media-btn{
+  width:89px ;
+  height: 24px;
+  background: var(--background-button);
+  color: #FFF;
+  text-align: center;
+  font-family: Gothic A1;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  display: none;
+}
+
+a #media-btn{
+  text-decoration: none;
+}
+
+.menu-burger{
+  width: 51px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 32px;
+  display: none;
+  
+}
+
+.menu-burger .bar{
+  width: 51px;
+  height: 8px;
+  background: #000;
+  border-radius: 10px;
+}
+
+
+
+
+
+/* Média query pour la version mobile */
+
+@media  screen and (max-width:390px ) {
+  body{
+    width: 100%;
+    font-family: Gothic A1;
+  }
+
+  header{
+    width: 100%;
+  }
+  nav{
+    width: 100%;
+  }
+  .navbar .register{
+    display: none;
+  }
+
+  header nav .logo img{
+    width: 98px;
+    height: 51px;
+    margin-left: 13px;
+  }
+  #media-btn{
+    display: block;
+  }
+
+  header .navbar{
+    gap: 70px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  header .navbar .list_menu{
+    display: none;
+  }
+  header .navbar .list_menu li a{
+    display: none;
+  }
+
+  .media-nav{
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-burger{
+    display: block;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* HERO */
+  .hero .bgc .hero-img{
+    width: 360px;
+    height: 218px;
+    
+  }
 }
